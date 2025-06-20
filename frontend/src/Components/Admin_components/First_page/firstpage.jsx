@@ -57,7 +57,6 @@ const HandleClicke=()=>{
     <div className="cms-container">
       
       <main className="cms-main">
-        {/* Tab Navigation */}
         <div className="tab-container">
           <button
             onClick={() => setActiveTab('select') }

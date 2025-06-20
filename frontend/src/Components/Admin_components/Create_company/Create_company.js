@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiSave, FiX, FiCalendar, FiDollarSign, FiMapPin, FiInfo } from 'react-icons/fi';
 import './CreateCompany.css'
-
+import axios from 'axios'
 const CompanyEntry = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -29,9 +29,11 @@ const CompanyEntry = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit =async (e) => {
     e.preventDefault();
     console.log('Company created:', formData);
+    const Responce= await axios.post('http://localhost:5000/' ,formData)
+    console.log(Responce)
     navigate('/admin/dashboard');
   };
 
