@@ -1,19 +1,16 @@
 const express = require("express");
 const cors= require('cors')
 const app = express();
+const adminRoute= require('./routes/admin');
+const connect = require("./db/db");
+
+require('dotenv').config()
 
 app.use(cors());
 app.use(express.json());
+app.use('/admin',adminRoute)
 
-app.post("/post", (req, res) => {
-    console.log("Connected to React");
-    res.redirect("/");
-});
-app.post('/',async(req,res)=>{
-    res.send(`<h1>Hello World</h1>`)
-    console.log(req.body)
-})
-
+connect()
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT,
