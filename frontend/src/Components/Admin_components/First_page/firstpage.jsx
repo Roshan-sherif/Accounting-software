@@ -89,8 +89,6 @@ const HandleClicke=()=>{
 
         </div>
 
-        {/* Rest of your existing tab content remains the same */}
-        {/* ... */}
       </main>
     </div>
   );

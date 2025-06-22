@@ -32,9 +32,17 @@ const CompanyEntry = () => {
   const handleSubmit =async (e) => {
     e.preventDefault();
     console.log('Company created:', formData);
+    try{
     const Responce= await axios.post('http://localhost:5000/admin/create-company' ,formData)
-    console.log(Responce)
-    navigate('/admin/dashboard');
+    if(Responce.data.status){
+          navigate('/admin/');
+    }else{
+      console.log("somthing went wrong")
+    }
+    }catch(err){
+      console.log(err)
+    }
+    
   };
 
   return (
