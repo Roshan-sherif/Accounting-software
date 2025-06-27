@@ -1,0 +1,50 @@
+.recent-activity {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.recent-activity h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.activity-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-content strong {
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.activity-content span {
+  color: #7f8c8d;
+  font-size: 12px;
+}
+
+.activity-time {
+  color: #95a5a6;
+  font-size: 12px;
+}

@@ -1,21 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import FrontPage from '../../Components/Admin_components/First_page/firstpage';
-import Navbar from '../../Components/Navbar/Navbar';
-import CreateCompany from '../../Components/Admin_components/Create_company/Create_company'
+import { Routes, Route } from 'react-router-dom';
+import Dashboard from '../../Pages/admin/Dashboard';
+import CompanyEntry from '../../Pages/admin/Create_company/Create_company';
 
-function Admin() {
+const Admin = () => {
   return (
-    <div>
-    <Navbar/>
     <Routes>
-      <Route path='/admin' element={<FrontPage/>}/>
-      <Route path='/admin/create_company' element={<CreateCompany/>}/>
-
+      <Route path="/admin" element={<Dashboard />} />
+      <Route path="/admin/company/create" element={< CompanyEntry/>} />
     </Routes>
-
-    </div>
   );
-}
+};
 
 export default Admin;
