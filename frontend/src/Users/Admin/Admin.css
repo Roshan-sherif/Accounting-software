@@ -6,3 +6,8 @@
   background: #0f172a;
   min-height: 100vh;
 }
+.admin-main {
+  flex: 1;
+  margin-left: 250px;
+  transition: margin-left 0.3s;
+}

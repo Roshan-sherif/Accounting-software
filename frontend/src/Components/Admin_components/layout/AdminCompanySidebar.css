@@ -1,0 +1,48 @@
+.company-sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  background: #34495e;
+  color: white;
+  padding: 20px 0;
+}
+
+.sidebar-header {
+  padding: 0 20px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-header h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.sidebar-header p {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.company-sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.company-sidebar nav ul li a {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.company-sidebar nav ul li a:hover,
+.company-sidebar nav ul li a.active {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.company-sidebar nav ul li svg {
+  margin-right: 12px;
+  width: 20px;
+}
