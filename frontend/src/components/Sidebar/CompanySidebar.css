@@ -1,0 +1,129 @@
+.company-sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  background: #2c3e50;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.sidebar-header {
+  padding: 20px;
+  background: #34495e;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-scrollable {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 20px;
+}
+
+/* Menu Items */
+.menu-item {
+  display: block;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.menu-item.active {
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.menu-title {
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.menu-title:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.icon {
+  margin-right: 12px;
+  width: 20px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.submenu {
+  background: rgba(0,0,0,0.1);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.menu-item.open .submenu {
+  max-height: 1000px;
+}
+
+.submenu a {
+  display: block;
+  padding: 10px 20px 10px 50px;
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  transition: all 0.2s;
+  font-size: 14px;
+  position: relative;
+}
+
+.submenu a:hover,
+.submenu a.active {
+  background: rgba(255,255,255,0.05);
+  color: white;
+  padding-left: 52px;
+}
+
+.submenu a.active::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* Custom Scrollbar */
+.sidebar-scrollable::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-scrollable::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 3px;
+}
+
+.sidebar-scrollable::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Chevron Animation */
+.menu-item svg:last-child {
+  margin-left: auto;
+  transition: transform 0.3s;
+  font-size: 12px;
+}
+
+.menu-item.open svg:last-child {
+  transform: rotate(90deg);
+}

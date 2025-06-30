@@ -1,0 +1,152 @@
+.company-details-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.details-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.company-logo {
+  margin-right: 20px;
+}
+
+.logo-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.company-title {
+  flex: 1;
+}
+
+.company-title h1 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+.company-id {
+  margin: 5px 0 0;
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-edit, .btn-save, .btn-cancel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.btn-edit {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-save {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-cancel {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-edit:hover, .btn-save:hover, .btn-cancel:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.details-content {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 20px;
+}
+
+.details-section {
+  margin-bottom: 30px;
+}
+
+.details-section h2 {
+  color: #2c3e50;
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.detail-item {
+  margin-bottom: 15px;
+}
+
+.detail-item label {
+  display: block;
+  margin-bottom: 5px;
+  color: #7f8c8d;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.detail-item p {
+  margin: 0;
+  padding: 8px 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  min-height: 36px;
+}
+
+.detail-item input,
+.detail-item select,
+.detail-item textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.detail-item textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.detail-item select {
+  background: white;
+}
+
+/* Icon styling */
+.detail-item label svg {
+  margin-right: 5px;
+  vertical-align: middle;
+}

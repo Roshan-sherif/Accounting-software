@@ -1,0 +1,111 @@
+/* SelectCompany.css */
+.company-select-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.company-select-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.company-select-header h2 {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.company-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.company-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+.company-card:hover {
+  border-color: #4a90e2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.company-card.selected {
+  border-color: #4a90e2;
+  background-color: #f5f9ff;
+}
+
+.company-info {
+  flex: 1;
+}
+
+.company-name {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.company-details {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.active-badge {
+  background-color: #e6f7e6;
+  color: #2e7d32;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.action-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.primary-button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.primary-button:hover {
+  background-color: #3a7bc8;
+}
+
+.secondary-button {
+  background-color: white;
+  color: #4a90e2;
+  border: 1px solid #4a90e2;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.secondary-button:hover {
+  background-color: #f5f9ff;
+}

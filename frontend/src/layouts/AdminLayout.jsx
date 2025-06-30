@@ -10,8 +10,8 @@ function MainLayout({ children }) {
       <div className="main-content">
         <AdminNavbar />
         <main className="content-area">
-          {children}
-        </main>
+          {children || <Outlet />}
+      </main>
       </div>
     </div>
   );
