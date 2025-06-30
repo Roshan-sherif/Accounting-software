@@ -91,22 +91,22 @@ const CompanySidebar = () => {
               {openMenus.master ? <FaChevronDown /> : <FaChevronRight />}
             </div>
             <div className="submenu">
-              <NavLink to="/master/customers" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/master/customers" className={({ isActive }) => isActive ? 'active' : ''}>
                 Customers
               </NavLink>
-              <NavLink to="/master/suppliers" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/master/suppliers" className={({ isActive }) => isActive ? 'active' : ''}>
                 Suppliers
               </NavLink>
-              <NavLink to="/master/account-group" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/master/account-group" className={({ isActive }) => isActive ? 'active' : ''}>
                 Account Group
               </NavLink>
-              <NavLink to="/master/account-ledger" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/master/account-ledger" className={({ isActive }) => isActive ? 'active' : ''}>
                 Account Ledger
               </NavLink>
-              <NavLink to="/master/voucher-type" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/master/voucher-type" className={({ isActive }) => isActive ? 'active' : ''}>
                 Voucher Type
               </NavLink>
-              <NavLink to="/master/currency" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/master/currency" className={({ isActive }) => isActive ? 'active' : ''}>
                 Currency
               </NavLink>
             </div>
@@ -120,16 +120,16 @@ const CompanySidebar = () => {
               {openMenus.products ? <FaChevronDown /> : <FaChevronRight />}
             </div>
             <div className="submenu">
-              <NavLink to="/products/categories" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/products/categories" className={({ isActive }) => isActive ? 'active' : ''}>
                 Categories
               </NavLink>
-              <NavLink to="/products/creation" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/products/creation" className={({ isActive }) => isActive ? 'active' : ''}>
                 Product Creation
               </NavLink>
-              <NavLink to="/products/brands" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/products/brands" className={({ isActive }) => isActive ? 'active' : ''}>
                 Brands
               </NavLink>
-              <NavLink to="/products/units" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/products/units" className={({ isActive }) => isActive ? 'active' : ''}>
                 Units
               </NavLink>
             </div>
@@ -143,10 +143,10 @@ const CompanySidebar = () => {
               {openMenus.taxes ? <FaChevronDown /> : <FaChevronRight />}
             </div>
             <div className="submenu">
-              <NavLink to="/taxes/setup" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/taxes/setup" className={({ isActive }) => isActive ? 'active' : ''}>
                 Tax Setup
               </NavLink>
-              <NavLink to="/taxes/purchase-price-list" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/taxes/purchase-price-list" className={({ isActive }) => isActive ? 'active' : ''}>
                 Purchase Price List
               </NavLink>
             </div>
@@ -160,16 +160,16 @@ const CompanySidebar = () => {
               {openMenus.purchases ? <FaChevronDown /> : <FaChevronRight />}
             </div>
             <div className="submenu">
-              <NavLink to="/purchases/quotation" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/purchases/quotation" className={({ isActive }) => isActive ? 'active' : ''}>
                 Purchase Quotation
               </NavLink>
-              <NavLink to="/purchases/orders" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/purchases/orders" className={({ isActive }) => isActive ? 'active' : ''}>
                 Purchase Orders
               </NavLink>
-              <NavLink to="/purchases/invoice" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/purchases/invoice" className={({ isActive }) => isActive ? 'active' : ''}>
                 Purchase Invoice
               </NavLink>
-              <NavLink to="/purchases/return" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/purchases/return" className={({ isActive }) => isActive ? 'active' : ''}>
                 Purchase Return
               </NavLink>
             </div>
@@ -183,16 +183,16 @@ const CompanySidebar = () => {
               {openMenus.sales ? <FaChevronDown /> : <FaChevronRight />}
             </div>
             <div className="submenu">
-              <NavLink to="/sales/quotation" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/sales/quotation" className={({ isActive }) => isActive ? 'active' : ''}>
                 Sales Quotation
               </NavLink>
-              <NavLink to="/sales/orders" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/sales/orders" className={({ isActive }) => isActive ? 'active' : ''}>
                 Sales Orders
               </NavLink>
-              <NavLink to="/sales/invoices" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/sales/invoices" className={({ isActive }) => isActive ? 'active' : ''}>
                 Sales Invoices
               </NavLink>
-              <NavLink to="/sales/return" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/sales/return" className={({ isActive }) => isActive ? 'active' : ''}>
                 Sales Return
               </NavLink>
             </div>
@@ -206,16 +206,16 @@ const CompanySidebar = () => {
               {openMenus.transactions ? <FaChevronDown /> : <FaChevronRight />}
             </div>
             <div className="submenu">
-              <NavLink to="/transactions/bank-reconciliation" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/transactions/bank-reconciliation" className={({ isActive }) => isActive ? 'active' : ''}>
                 Bank Reconciliation
               </NavLink>
-              <NavLink to="/transactions/journal-voucher" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/transactions/journal-voucher" className={({ isActive }) => isActive ? 'active' : ''}>
                 Journal Voucher
               </NavLink>
-              <NavLink to="/transactions/payment-voucher" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/transactions/payment-voucher" className={({ isActive }) => isActive ? 'active' : ''}>
                 Payment Voucher
               </NavLink>
-              <NavLink to="/transactions/receipt-voucher" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/transactions/receipt-voucher" className={({ isActive }) => isActive ? 'active' : ''}>
                 Receipt Voucher
               </NavLink>
             </div>
@@ -229,13 +229,13 @@ const CompanySidebar = () => {
               {openMenus.financial ? <FaChevronDown /> : <FaChevronRight />}
             </div>
             <div className="submenu">
-              <NavLink to="/financial/balance-sheet" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/financial/balance-sheet" className={({ isActive }) => isActive ? 'active' : ''}>
                 Balance Sheet
               </NavLink>
-              <NavLink to="/financial/profit-loss" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/financial/profit-loss" className={({ isActive }) => isActive ? 'active' : ''}>
                 Profit & Loss
               </NavLink>
-              <NavLink to="/financial/chart-of-accounts" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/financial/chart-of-accounts" className={({ isActive }) => isActive ? 'active' : ''}>
                 Chart of Accounts
               </NavLink>
             </div>
@@ -249,31 +249,31 @@ const CompanySidebar = () => {
               {openMenus.reports ? <FaChevronDown /> : <FaChevronRight />}
             </div>
             <div className="submenu">
-              <NavLink to="/reports/ledger" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/reports/ledger" className={({ isActive }) => isActive ? 'active' : ''}>
                 Account Ledger Report
               </NavLink>
-              <NavLink to="/reports/payment" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/reports/payment" className={({ isActive }) => isActive ? 'active' : ''}>
                 Payment Report
               </NavLink>
-              <NavLink to="/reports/receipt" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/reports/receipt" className={({ isActive }) => isActive ? 'active' : ''}>
                 Receipt Report
               </NavLink>
-              <NavLink to="/reports/journal" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/reports/journal" className={({ isActive }) => isActive ? 'active' : ''}>
                 Journal Report
               </NavLink>
-              <NavLink to="/reports/purchase-invoice" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/reports/purchase-invoice" className={({ isActive }) => isActive ? 'active' : ''}>
                 Purchase Invoice Report
               </NavLink>
-              <NavLink to="/reports/purchase-return" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/reports/purchase-return" className={({ isActive }) => isActive ? 'active' : ''}>
                 Purchase Return Report
               </NavLink>
-              <NavLink to="/reports/sales-invoice" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/reports/sales-invoice" className={({ isActive }) => isActive ? 'active' : ''}>
                 Sales Invoice Report
               </NavLink>
-              <NavLink to="/reports/sales-return" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/reports/sales-return" className={({ isActive }) => isActive ? 'active' : ''}>
                 Sales Return Report
               </NavLink>
-              <NavLink to="/reports/stock" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/reports/stock" className={({ isActive }) => isActive ? 'active' : ''}>
                 Stock Report
               </NavLink>
             </div>
@@ -287,19 +287,19 @@ const CompanySidebar = () => {
               {openMenus.settings ? <FaChevronDown /> : <FaChevronRight />}
             </div>
             <div className="submenu">
-              <NavLink to="/settings/email" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/settings/email" className={({ isActive }) => isActive ? 'active' : ''}>
                 Email Config
               </NavLink>
-              <NavLink to="/settings/user-creation" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/settings/user-creation" className={({ isActive }) => isActive ? 'active' : ''}>
                 User Creation
               </NavLink>
-              <NavLink to="/settings/bank-accounts" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/settings/bank-accounts" className={({ isActive }) => isActive ? 'active' : ''}>
                 Bank Accounts
               </NavLink>
-              <NavLink to="/settings/financial-year" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/settings/financial-year" className={({ isActive }) => isActive ? 'active' : ''}>
                 Financial Year
               </NavLink>
-              <NavLink to="/settings/countries" className={({ isActive }) => isActive ? 'active' : ''}>
+              <NavLink to="/company/settings/countries" className={({ isActive }) => isActive ? 'active' : ''}>
                 Countries
               </NavLink>
             </div>
