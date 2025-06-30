@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaBell, FaUserCircle, FaSearch } from 'react-icons/fa';
-import './AdminNabar.css';
+import './AdminNavbar.css';
 
 const AdminNavbar = () => {
   return (

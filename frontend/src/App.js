@@ -1,10 +1,12 @@
-import React from 'react'
-import Admin from './Users/Admin/Admin'
+import './App.css';
+import AdminRoutes from './routes/AdminRoutes';
 
 function App() {
   return (
-    <Admin/>
-  )
+    <div className="App">
+      <AdminRoutes/>
+    </div>
+  );
 }
 
-export default App
+export default App;

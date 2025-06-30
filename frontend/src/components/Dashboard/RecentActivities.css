@@ -1,0 +1,86 @@
+.recent-activity {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.section-title {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.activity-item:hover {
+  background: #f8f9fa;
+}
+
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+.activity-item.invoice .activity-icon {
+  background: rgba(52, 152, 219, 0.1);
+  color: #3498db;
+}
+
+.activity-item.payment .activity-icon {
+  background: rgba(46, 204, 113, 0.1);
+  color: #2ecc71;
+}
+
+.activity-item.user .activity-icon {
+  background: rgba(155, 89, 182, 0.1);
+  color: #9b59b6;
+}
+
+.activity-details {
+  flex: 1;
+}
+
+.activity-details h3 {
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.activity-details p {
+  margin: 0;
+  font-size: 13px;
+  color: #7f8c8d;
+}
+
+.amount {
+  display: inline-block;
+  margin-top: 5px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.activity-time {
+  font-size: 12px;
+  color: #95a5a6;
+}
