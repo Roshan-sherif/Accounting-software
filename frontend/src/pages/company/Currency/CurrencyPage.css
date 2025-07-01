@@ -1,0 +1,74 @@
+/* ===== CURRENCY SPECIFIC STYLES ===== */
+.currency-symbol {
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.narration-cell {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Currency form specific */
+.currency-preview {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 15px 0;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.currency-preview-amount {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.currency-preview-code {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Decimal places selector */
+.decimal-places-selector {
+  display: flex;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.decimal-places-option {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-right: 1px solid var(--border-color);
+}
+
+.decimal-places-option:last-child {
+  border-right: none;
+}
+
+.decimal-places-option.selected {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Symbol input with preview */
+.symbol-input-container {
+  position: relative;
+}
+
+.symbol-preview {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+}

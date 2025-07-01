@@ -14,6 +14,7 @@ import LedgerForm from '../pages/company/AccountLedger/AddAccountLedger/AddAccou
 import LedgerListPage from '../pages/company/AccountLedger/AccountLedger';
 import VoucherTypeListPage from '../pages/company/Voucher/VoucherTypes';
 import VoucherTypeForm from '../pages/company/Voucher/AddVoucher/AddVoucher';
+import CurrencyListPage from '../pages/company/Currency/CurrencyPage';
 
 function AdminRoutes() {
   return (
@@ -32,10 +33,13 @@ function AdminRoutes() {
         <Route path='/master/ledgers/create' element={<LedgerForm />} />
         <Route path='/master/voucher-type' element={<VoucherTypeListPage />} />
         <Route path='/master/voucher-type/add' element={<VoucherTypeForm />} />
+                <Route path='/master/currency/add' element={<VoucherTypeForm />} />
+        <Route path='/master/currency' element={<CurrencyListPage />} />
 
 
 
-        /company/master/ledgers/create
+
+
 
 
 
