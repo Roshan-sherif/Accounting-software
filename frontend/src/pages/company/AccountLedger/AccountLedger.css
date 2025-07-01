@@ -1,0 +1,353 @@
+/* ===== BASE STYLES ===== */
+.accounting-app {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Reusable card style */
+.accounting-card {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* Form elements base */
+.accounting-input {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: 14px;
+  width: 100%;
+  transition: border-color 0.3s;
+}
+
+.accounting-input:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+/* Buttons */
+.accounting-btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.accounting-btn-primary {
+  background: #4a90e2;
+  color: white;
+}
+
+.accounting-btn-primary:hover {
+  background: #3a7bc8;
+}
+
+.accounting-btn-secondary {
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.accounting-btn-secondary:hover {
+  background: #e9e9e9;
+}
+
+.accounting-btn-danger {
+  background: #e74c3c;
+  color: white;
+}
+
+.accounting-btn-danger:hover {
+  background: #c0392b;
+}
+/* ===== LEDGER SPECIFIC STYLES ===== */
+.ledger-balance-display {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.ledger-balance-card {
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  background: #f9f9f9;
+  border-radius: 4px;
+  margin: 0 10px;
+}
+
+.ledger-balance-card:first-child {
+  margin-left: 0;
+}
+
+.ledger-balance-card:last-child {
+  margin-right: 0;
+}
+
+.ledger-balance-card h3 {
+  margin-top: 0;
+  color: #555;
+  font-size: 16px;
+}
+
+.ledger-balance-amount {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.debit-balance {
+  color: #27ae60;
+}
+
+.credit-balance {
+  color: #e74c3c;
+}
+
+/* Transaction list in ledger view */
+.transaction-list {
+  margin-top: 30px;
+}
+
+.transaction-item {
+  border-left: 4px solid #4a90e2;
+  padding: 15px;
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.transaction-item.debit {
+  border-left-color: #27ae60;
+}
+
+.transaction-item.credit {
+  border-left-color: #e74c3c;
+}
+
+.transaction-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.transaction-date {
+  color: #777;
+  font-size: 13px;
+}
+
+.transaction-amount {
+  font-weight: 600;
+}
+
+.transaction-reference {
+  font-style: italic;
+  color: #555;
+  margin: 5px 0;
+}
+
+.transaction-description {
+  color: #666;
+  font-size: 14px;
+}
+/* ===== TRANSACTION FORM STYLES ===== */
+.transaction-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.transaction-form-actions {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.amount-input-container {
+  position: relative;
+}
+
+.amount-input-container::before {
+  content: '$';
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+}
+
+.amount-input {
+  padding-left: 25px !important;
+}
+
+/* Type toggle buttons */
+.type-toggle {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.type-toggle-btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.type-toggle-btn.active {
+  background: #4a90e2;
+  color: white;
+}
+
+.type-toggle-btn:first-child {
+  border-right: 1px solid #ddd;
+}
+
+.type-toggle-btn.debit.active {
+  background: #27ae60;
+}
+
+.type-toggle-btn.credit.active {
+  background: #e74c3c;
+}
+/* ===== ENHANCED TABLE STYLES ===== */
+.accounting-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.accounting-table th {
+  background-color: #f5f7fa;
+  color: #555;
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 15px;
+  border-bottom: 2px solid #e0e6ed;
+}
+
+.accounting-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e6ed;
+  vertical-align: middle;
+}
+
+.accounting-table tr:hover {
+  background-color: #f9fafc;
+}
+
+/* Compact variant */
+.accounting-table.compact {
+  font-size: 13px;
+}
+
+.accounting-table.compact th,
+.accounting-table.compact td {
+  padding: 8px 12px;
+}
+
+/* Striped variant */
+.accounting-table.striped tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Status indicators */
+.status-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-active {
+  background: #e1f5fe;
+  color: #0288d1;
+}
+
+.status-inactive {
+  background: #f5f5f5;
+  color: #757575;
+}
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 768px) {
+  .transaction-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .transaction-form-actions {
+    grid-column: span 1;
+  }
+  
+  .ledger-balance-display {
+    flex-direction: column;
+  }
+  
+  .ledger-balance-card {
+    margin: 5px 0;
+  }
+  
+  .accounting-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Print styles */
+@media print {
+  .page-header, .header-actions {
+    display: none;
+  }
+  
+  .accounting-table {
+    width: 100%;
+    font-size: 12px;
+  }
+}
+/* ===== UTILITY CLASSES ===== */
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-debit {
+  color: #27ae60;
+}
+
+.text-credit {
+  color: #e74c3c;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

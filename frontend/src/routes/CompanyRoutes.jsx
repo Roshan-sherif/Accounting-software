@@ -8,6 +8,10 @@ import CustomerPage from '../pages/company/Customers/Customers';
 import AddCustomer from '../pages/company/Customers/AddCustomers/AddCustomers';
 import SupplierList from '../pages/company/Suppliers/Suppliers';
 import AddSupplier from '../pages/company/Suppliers/AddSuppliers/AddSuppliers';
+import AccountGroupList from '../pages/company/AccountingGroup/AccountingGroup';
+import CreateAccountGroup from '../pages/company/AccountingGroup/AddAccountingGroup/AddAccountingGroup';
+import LedgerForm from '../pages/company/AccountLedger/AddAccountLedger/AddAccountLedger';
+import LedgerListPage from '../pages/company/AccountLedger/AccountLedger';
 
 function AdminRoutes() {
   return (
@@ -20,6 +24,15 @@ function AdminRoutes() {
         <Route path='/masters/customers/add' element={<AddCustomer />} />
         <Route path='/master/suppliers' element={<SupplierList />} />
         <Route path='/master/suppliers/add' element={<AddSupplier />} />
+        <Route path='/master/account-group' element={<AccountGroupList />} />
+        <Route path='/master/account-groups/add' element={<CreateAccountGroup />} />
+        <Route path='/master/account-ledger' element={<LedgerListPage />} />
+        <Route path='/master/ledgers/create' element={<LedgerForm />} />
+
+
+        /company/master/ledgers/create
+
+
 
 
 
