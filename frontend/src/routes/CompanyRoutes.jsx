@@ -4,17 +4,17 @@ import ComapnyLayout from '../layouts/ComapnyLayout';
 import Dashboard from '../pages/admin/Dashboard/Dashboard';
 import CompanyDetails from '../pages/company/CompanyDetails/ComapanyDetails';
 import ChangeCompanyPassword from '../pages/company/ChangePassword/ChangePassword';
-import CustomerPage from '../pages/company/Customers/Customers';
-import AddCustomer from '../pages/company/Customers/AddCustomers/AddCustomers';
-import SupplierList from '../pages/company/Suppliers/Suppliers';
-import AddSupplier from '../pages/company/Suppliers/AddSuppliers/AddSuppliers';
-import AccountGroupList from '../pages/company/AccountingGroup/AccountingGroup';
-import CreateAccountGroup from '../pages/company/AccountingGroup/AddAccountingGroup/AddAccountingGroup';
-import LedgerForm from '../pages/company/AccountLedger/AddAccountLedger/AddAccountLedger';
-import LedgerListPage from '../pages/company/AccountLedger/AccountLedger';
-import VoucherTypeListPage from '../pages/company/Voucher/VoucherTypes';
-import VoucherTypeForm from '../pages/company/Voucher/AddVoucher/AddVoucher';
-import CurrencyListPage from '../pages/company/Currency/CurrencyPage';
+import CustomerPage from '../pages/company/Masters/Customers/Customers';
+import AddCustomer from '../pages/company/Masters/Customers/AddCustomers/AddCustomers';
+import SupplierList from '../pages/company/Masters/Suppliers/Suppliers';
+import AddSupplier from '../pages/company/Masters/Suppliers/AddSuppliers/AddSuppliers';
+import AccountGroupList from '../pages/company/Masters/AccountingGroup/AccountingGroup';
+import CreateAccountGroup from '../pages/company/Masters/AccountingGroup/AddAccountingGroup/AddAccountingGroup';
+import LedgerForm from '../pages/company/Masters/AccountLedger/AddAccountLedger/AddAccountLedger';
+import LedgerListPage from '../pages/company/Masters/AccountLedger/AccountLedger';
+import VoucherTypeListPage from '../pages/company/Masters/Voucher/VoucherTypes';
+import VoucherTypeForm from '../pages/company/Masters/Voucher/AddVoucher/AddVoucher';
+import CurrencyListPage from '../pages/company/Masters/Currency/CurrencyPage';
 
 function AdminRoutes() {
   return (
@@ -33,7 +33,7 @@ function AdminRoutes() {
         <Route path='/master/ledgers/create' element={<LedgerForm />} />
         <Route path='/master/voucher-type' element={<VoucherTypeListPage />} />
         <Route path='/master/voucher-type/add' element={<VoucherTypeForm />} />
-                <Route path='/master/currency/add' element={<VoucherTypeForm />} />
+                <Route path='/master/currency/add' element={<VoucherTypeForm/>} />
         <Route path='/master/currency' element={<CurrencyListPage />} />
 
 
