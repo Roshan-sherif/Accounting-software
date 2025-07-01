@@ -12,6 +12,8 @@ import AccountGroupList from '../pages/company/AccountingGroup/AccountingGroup';
 import CreateAccountGroup from '../pages/company/AccountingGroup/AddAccountingGroup/AddAccountingGroup';
 import LedgerForm from '../pages/company/AccountLedger/AddAccountLedger/AddAccountLedger';
 import LedgerListPage from '../pages/company/AccountLedger/AccountLedger';
+import VoucherTypeListPage from '../pages/company/Voucher/VoucherTypes';
+import VoucherTypeForm from '../pages/company/Voucher/AddVoucher/AddVoucher';
 
 function AdminRoutes() {
   return (
@@ -28,6 +30,9 @@ function AdminRoutes() {
         <Route path='/master/account-groups/add' element={<CreateAccountGroup />} />
         <Route path='/master/account-ledger' element={<LedgerListPage />} />
         <Route path='/master/ledgers/create' element={<LedgerForm />} />
+        <Route path='/master/voucher-type' element={<VoucherTypeListPage />} />
+        <Route path='/master/voucher-type/add' element={<VoucherTypeForm />} />
+
 
 
         /company/master/ledgers/create

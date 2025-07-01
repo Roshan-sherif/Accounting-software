@@ -1,0 +1,91 @@
+/* ===== VOUCHER TYPE SPECIFIC STYLES ===== */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch label {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.toggle-switch label:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.toggle-switch input:checked + label {
+  background-color: var(--success-color);
+}
+
+.toggle-switch input:checked + label:before {
+  transform: translateX(26px);
+}
+
+.toggle-switch-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle-switch-status span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Compact form layout */
+.compact-form .form-row {
+  margin-bottom: 10px;
+}
+
+.compact-form .form-group label {
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.compact-form .form-group input,
+.compact-form .form-group select {
+  padding: 8px 10px;
+  font-size: 13px;
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-active {
+  background-color: #e1f5fe;
+  color: #0288d1;
+}
+
+.status-inactive {
+  background-color: #f5f5f5;
+  color: #757575;
+}
