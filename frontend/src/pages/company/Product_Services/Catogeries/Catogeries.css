@@ -1,0 +1,70 @@
+/* ===== CATEGORY SPECIFIC STYLES ===== */
+.description-cell {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Category form specific */
+.category-form-preview {
+  margin: 15px 0;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.category-form-preview h4 {
+  margin: 0 0 5px 0;
+  color: #2c3e50;
+}
+
+.category-form-preview p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Status toggle */
+.status-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-toggle-label {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Compact category cards for selection */
+.category-card {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.category-card:hover {
+  border-color: var(--primary-color);
+  background: #f5f9ff;
+}
+
+.category-card.active {
+  border-color: var(--primary-color);
+  background: #e1f0ff;
+}
+
+.category-card h4 {
+  margin: 0 0 5px 0;
+  font-size: 15px;
+}
+
+.category-card p {
+  margin: 0;
+  color: #666;
+  font-size: 13px;
+}

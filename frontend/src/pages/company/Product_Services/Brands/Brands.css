@@ -1,0 +1,93 @@
+/* ===== BRAND SPECIFIC STYLES ===== */
+
+/* Status Badges */
+.status-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid;
+}
+
+.status-badge.active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-color: #2e7d32;
+}
+
+.status-badge.inactive {
+  background-color: #ffebee;
+  color: #c62828;
+  border-color: #c62828;
+}
+
+/* Status Toggle */
+.status-toggle {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.toggle-btn {
+  padding: 8px 20px;
+  background: #f5f5f5;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.toggle-btn.active {
+  background: #4caf50;
+  color: white;
+}
+
+.toggle-btn:first-child {
+  border-right: 1px solid #ddd;
+}
+
+.toggle-btn:last-child.active {
+  background: #f44336;
+}
+
+/* Description cell */
+.description-cell {
+  max-width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Form specific styles */
+.brand-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.brand-logo-preview {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border: 1px dashed #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.upload-logo-btn {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #f5f5f5;
+  border: 1px dashed #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.upload-logo-btn:hover {
+  background: #e0e0e0;
+}

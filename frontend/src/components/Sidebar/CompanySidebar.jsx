@@ -132,6 +132,13 @@ const CompanySidebar = () => {
               <NavLink to="/company/products/units" className={({ isActive }) => isActive ? 'active' : ''}>
                 Units
               </NavLink>
+                            <NavLink to="/company/products/Taxes" className={({ isActive }) => isActive ? 'active' : ''}>
+                Taxes
+              </NavLink>
+              <NavLink to="/company/products/Purchase-Price-List" className={({ isActive }) => isActive ? 'active' : ''}>
+                Purchase Price List
+              </NavLink>
+
             </div>
           </div>
 
