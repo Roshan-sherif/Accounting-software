@@ -43,6 +43,10 @@ import OrderView from '../pages/company/Sales/SalesOrders/SalesOrders';
 import SalesOrderCreate from '../pages/company/Sales/SalesOrders/AddSalesOrder/AddSalesOrder';
 import ReturnView from '../pages/company/Sales/SalesReturn/SalesReturn';
 import SalesReturnCreate from '../pages/company/Sales/SalesReturn/AddSalesReturn/AddSalesReturn';
+import BankReconciliation from '../pages/company/Transactions/BankReconciliation/BankReconciliation';
+import JournalVoucher from '../pages/company/Transactions/JournalVoucher/JournalVoucher';
+import PaymentVoucher from '../pages/company/Transactions/Paymentvoucher.css/Paymentvoucher';
+import ReceiptVoucher from '../pages/company/Transactions/ReciptVoucher/ReciptVoucher';
 
 function AdminRoutes() {
   return (
@@ -97,6 +101,11 @@ function AdminRoutes() {
         <Route path='/sales/orders/create' element={<SalesOrderCreate />} />
         <Route path='/sales/return/' element={<ReturnView />} />
         <Route path='/sales/return/create' element={<SalesReturnCreate />} />
+
+        <Route path='/transactions/bank-reconciliation' element={<BankReconciliation />} />
+        <Route path='/transactions/journal-voucher' element={<JournalVoucher />} />
+        <Route path='/transactions/payment-voucher' element={<PaymentVoucher />} />
+        <Route path='/transactions/receipt-voucher' element={<ReceiptVoucher />} />
 
 
 
