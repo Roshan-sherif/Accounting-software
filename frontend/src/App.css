@@ -391,3 +391,120 @@
   gap: 8px;
   margin-right: auto;
 }
+/* Common styles for all view pages */
+.invoice-view-container,
+.order-view-container,
+.return-view-container {
+  width: 98%;
+  height: calc(100vh - 100px);
+  margin: 10px auto;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.invoice-view-container .header,
+.order-view-container .header,
+.return-view-container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.invoice-view-container .create-btn,
+.order-view-container .create-btn,
+.return-view-container .create-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.invoice-view-container .table-container,
+.order-view-container .table-container,
+.return-view-container .table-container {
+  flex: 1;
+  overflow: auto;
+}
+
+.invoice-view-container table,
+.order-view-container table,
+.return-view-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoice-view-container th,
+.order-view-container th,
+.return-view-container th {
+  background: #f5f5f5;
+  padding: 10px;
+  text-align: left;
+  position: sticky;
+  top: 0;
+}
+
+.invoice-view-container td,
+.order-view-container td,
+.return-view-container td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: white;
+}
+
+.status-badge.pending {
+  background: #f39c12;
+}
+
+.status-badge.paid,
+.status-badge.processed,
+.status-badge.shipped,
+.status-badge.approved {
+  background: #2ecc71;
+}
+
+.status-badge.processing {
+  background: #3498db;
+}
+
+.action-btn {
+  padding: 4px 8px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+  font-size: 12px;
+}
+
+.action-btn.view {
+  background: #3498db;
+}
+
+.action-btn.edit {
+  background: #f39c12;
+}
+
+.action-btn.print {
+  background: #9b59b6;
+}
+
+/* Additional specific styles if needed */
+.return-view-container .status-badge.pending {
+  background: #f39c12;
+}
+
+.return-view-container .status-badge.processed {
+  background: #2ecc71;
+}

@@ -35,6 +35,14 @@ import PurchaseInvoiceList from '../pages/company/Purchases/PurchaseInvoice/Purc
 import CreatePurchaseInvoice from '../pages/company/Purchases/PurchaseInvoice/AddPurchaseInvoice';
 import PurchaseReturnList from '../pages/company/Purchases/PurchaseReturn/PurchaseReturn';
 import CreatePurchaseReturn from '../pages/company/Purchases/PurchaseReturn/AddPurchaseReturn';
+import QuotationView from '../pages/company/Sales/SalesQuatation/SalesQuatation';
+import QuotationCreate from '../pages/company/Sales/SalesQuatation/AddSalesQuatation/AddSalesQuatation';
+import SalesInvoiceCreate from '../pages/company/Sales/SalesInvoice/AddSalesInvoice';
+import InvoiceView from '../pages/company/Sales/SalesInvoice/SalesInvoice';
+import OrderView from '../pages/company/Sales/SalesOrders/SalesOrders';
+import SalesOrderCreate from '../pages/company/Sales/SalesOrders/AddSalesOrder/AddSalesOrder';
+import ReturnView from '../pages/company/Sales/SalesReturn/SalesReturn';
+import SalesReturnCreate from '../pages/company/Sales/SalesReturn/AddSalesReturn/AddSalesReturn';
 
 function AdminRoutes() {
   return (
@@ -53,42 +61,49 @@ function AdminRoutes() {
         <Route path='/master/ledgers/create' element={<LedgerForm />} />
         <Route path='/master/voucher-type' element={<VoucherTypeListPage />} />
         <Route path='/master/voucher-type/add' element={<VoucherTypeForm />} />
-          <Route path='/master/currency/add' element={<VoucherTypeForm/>} />
+        <Route path='/master/currency/add' element={<VoucherTypeForm />} />
         <Route path='/master/currency' element={<CurrencyListPage />} />
 
 
-                <Route path='/products/categories' element={<CategoryListPage />} />
+        <Route path='/products/categories' element={<CategoryListPage />} />
         <Route path='/product-services/categories/create' element={<CategoryForm />} />
-                <Route path='/products/creation' element={<ProductListPage />} />
+        <Route path='/products/creation' element={<ProductListPage />} />
         <Route path='/products/product/create' element={<ProductForm />} />
 
-                        <Route path='/products/brands' element={<BrandListPage />} />
+        <Route path='/products/brands' element={<BrandListPage />} />
         <Route path='/products/brands/add' element={<BrandForm />} />
         <Route path='products/units' element={<UnitsListPage />} />
-                <Route path='products/units/add' element={<UnitForm />} />
-                                <Route path='/products/Taxes' element={<TaxesListPage />} />
-                <Route path='/products/taxes/create' element={<TaxForm />} />
-                <Route path='products/units/add' element={<UnitForm />} />
-                <Route path='/products/Purchase-Price-List' element={<PriceListPage />} />
-                <Route path='/products/Purchase-Price-List/create' element={<PriceListForm />} />
+        <Route path='products/units/add' element={<UnitForm />} />
+        <Route path='/products/Taxes' element={<TaxesListPage />} />
+        <Route path='/products/taxes/create' element={<TaxForm />} />
+        <Route path='products/units/add' element={<UnitForm />} />
+        <Route path='/products/Purchase-Price-List' element={<PriceListPage />} />
+        <Route path='/products/Purchase-Price-List/create' element={<PriceListForm />} />
 
-                <Route path='/purchases/quotation' element={<PurchaseQuotationList />} />
-                <Route path='/purchases/quotation/create' element={<CreatePurchaseQuotation />} />
-                <Route path='/purchases/orders' element={<PurchaseOrderList />} />
-                <Route path='/purchases/orders/create' element={<CreatePurchaseOrder />} />
-                <Route path='/purchases/invoice' element={<PurchaseInvoiceList />} />
-                <Route path='/purchases/invoice/create' element={<CreatePurchaseInvoice />} />
-                <Route path='/purchases/return' element={<PurchaseReturnList />} />
-                <Route path='/purchases/return/create' element={<CreatePurchaseReturn />} />
+        <Route path='/purchases/quotation' element={<PurchaseQuotationList />} />
+        <Route path='/purchases/quotation/create' element={<CreatePurchaseQuotation />} />
+        <Route path='/purchases/orders' element={<PurchaseOrderList />} />
+        <Route path='/purchases/orders/create' element={<CreatePurchaseOrder />} />
+        <Route path='/purchases/invoice' element={<PurchaseInvoiceList />} />
+        <Route path='/purchases/invoice/create' element={<CreatePurchaseInvoice />} />
+        <Route path='/purchases/return' element={<PurchaseReturnList />} />
+        <Route path='/purchases/return/create' element={<CreatePurchaseReturn />} />
+
+        <Route path='/sales/quotation' element={<QuotationView />} />
+        <Route path='/sales/quotation/create' element={<QuotationCreate />} />
+        <Route path='/sales/invoices/' element={< InvoiceView/>} />
+        <Route path='/sales/invoice/create' element={<SalesInvoiceCreate />} />
+        <Route path='/sales/orders/' element={<OrderView />} />
+        <Route path='/sales/orders/create' element={<SalesOrderCreate />} />
+        <Route path='/sales/return/' element={<ReturnView />} />
+        <Route path='/sales/return/create' element={<SalesReturnCreate />} />
 
 
-        
 
 
 
 
 
-/product-services/categories/create
 
 
 
