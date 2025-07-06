@@ -1,0 +1,201 @@
+/* ProfitAndLoss.css */
+.profit-and-loss-container {
+  width: 98%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  font-family: Arial, sans-serif;
+}
+
+.profit-and-loss-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.header-section {
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-group label {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.filter-group.checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-group.checkbox label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.filter-group input,
+.filter-group select {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.print-btn,
+.export-btn {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.print-btn {
+  background: #3498db;
+  color: white;
+}
+
+.export-btn {
+  background: #2ecc71;
+  color: white;
+}
+
+.profit-and-loss-report {
+  border: 1px solid #eee;
+  padding: 20px;
+  background: #fff;
+}
+
+.company-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.company-header h3 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+}
+
+.company-header p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.profit-and-loss-table {
+  overflow-x: auto;
+}
+
+.profit-and-loss-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profit-and-loss-table th {
+  background: #f5f5f5;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.profit-and-loss-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.profit-and-loss-table .description {
+  padding-left: 20px;
+}
+
+.profit-and-loss-table .amount {
+  text-align: right;
+  font-family: monospace;
+  padding-right: 20px;
+}
+
+.section-header {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+
+.section-header td {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.section-total {
+  font-weight: bold;
+}
+
+.section-total td {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.total-row {
+  font-weight: bold;
+}
+
+.total-row td {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.grand-total {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.grand-total td {
+  border-top: 2px solid #333;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.positive {
+  color: #2ecc71;
+}
+
+.negative {
+  color: #e74c3c;
+}
+
+@media print {
+  .header-section,
+  .action-buttons {
+    display: none;
+  }
+  
+  .profit-and-loss-container {
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  .profit-and-loss-report {
+    border: none;
+    padding: 0;
+  }
+}

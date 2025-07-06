@@ -47,6 +47,9 @@ import BankReconciliation from '../pages/company/Transactions/BankReconciliation
 import JournalVoucher from '../pages/company/Transactions/JournalVoucher/JournalVoucher';
 import PaymentVoucher from '../pages/company/Transactions/Paymentvoucher.css/Paymentvoucher';
 import ReceiptVoucher from '../pages/company/Transactions/ReciptVoucher/ReciptVoucher';
+import BalanceSheet from '../pages/company/FinacialStatements/BalanceSheet/BalanceSheet';
+import ProfitAndLoss from '../pages/company/FinacialStatements/ProfitAndLoss/ProfitAndLoss';
+import ChartOfAccounts from '../pages/company/FinacialStatements/ChartOfAccounts/ChartOfAccounts';
 
 function AdminRoutes() {
   return (
@@ -107,7 +110,9 @@ function AdminRoutes() {
         <Route path='/transactions/payment-voucher' element={<PaymentVoucher />} />
         <Route path='/transactions/receipt-voucher' element={<ReceiptVoucher />} />
 
-
+        <Route path='/financial/balance-sheet' element={<BalanceSheet />} />
+        <Route path='financial/profit-loss' element={<ProfitAndLoss />} />
+        <Route path='/financial/chart-of-accounts' element={<ChartOfAccounts />} />
 
 
 
