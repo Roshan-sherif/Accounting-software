@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaLock, FaUser, FaBuilding, FaEye, FaEyeSlash } from 'react-icons/fa';
 import './login.css';
 import axios from 'axios';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const ACSOFTLogin = () => {
   const [email, setEmail] = useState('');
@@ -10,12 +11,16 @@ const ACSOFTLogin = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
+const navigate=useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
     try{
-        const responce=axios.post('http://localhost:5000/login/', {email,password})
+        const responce=axios.post('http://localhost:5000/api/login', {email,password})
+        if (responce){
+          console.log(responce)
+          navigate('/admin')
+        }
 
     }catch(err){
 
