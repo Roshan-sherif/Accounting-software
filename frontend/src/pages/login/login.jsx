@@ -12,21 +12,26 @@ const ACSOFTLogin = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 const navigate=useNavigate()
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     setIsLoading(true);
     try{
-        const responce=axios.post('http://localhost:5000/api/login', {email,password})
-        if (responce){
+        const responce=await axios.post('http://localhost:5000/api/login', {email,password})
+        console.log(responce.data)
+
+        if (responce.data.status){
           console.log(responce)
           navigate('/admin')
+        }else{
+                    navigate('/login')
+
         }
-
+ 
     }catch(err){
-
+      console.error(err)
     }
     console.log({ email, password, company, rememberMe });
-    // Simulate API call
+    
     setTimeout(() => setIsLoading(false), 1500);
   };
 

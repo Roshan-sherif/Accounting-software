@@ -12,15 +12,18 @@ module.exports={
             console.log(userData)
             try{
                 const user=await prisma.user.findUnique({
-                    where:{email}
+                     where:{email}
                 })
-                console.log(user)
+                 console.log(user)
                 if(!user){
                     reject()
                 }
+                if(user){
                 const isMatch=await  bcrypt.compare(password,user.password)
-                if(!isMatch){
+                                if(!isMatch){
                     reject()
+                }
+
                 }
                 console.log(user)
                 resolve(user)
