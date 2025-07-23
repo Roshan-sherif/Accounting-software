@@ -26,7 +26,8 @@ router.post('/', (req, res) => {
                 sameSite: "strict",
                 maxAge: 7 * 24 * 60 * 60 * 1000
             });
-
+            const decode= jwt.verify(token, process.env.JWT_TOKEN)
+                console.log(decode)
 
             res.json({ status: true, user: result });
         })

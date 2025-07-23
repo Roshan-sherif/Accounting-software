@@ -6,14 +6,18 @@ import './Customers.css';
 const CustomerPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
+  useEffect=()=>{
+    
+  }
+
   const customers = [
     {
       id: 1,
       srNo: 1,
-      customerCode: 'CUST001',
+      customerCode: 'roshamn',
       customerName: 'ABC Traders',
       nattation: 'Wholesale',
-      email: 'contact@abctraders.com',
+      email: 'contact@asdfsadfasdfadsc.com',
       phoneNumber: '9876543210',
       creditPeriod: '30 Days',
       creditLimit: '₹50,000'
