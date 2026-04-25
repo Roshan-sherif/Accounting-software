@@ -1,37 +1,43 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaLock, FaUser, FaBuilding, FaEye, FaEyeSlash } from 'react-icons/fa';
 import './login.css';
 import axios from 'axios';
 import { Navigate, useNavigate } from 'react-router-dom';
-
+import { AuthContext } from '../../context/AuthContext'
 const ACSOFTLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [company, setCompany] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
+  const { setUser, setAccessToken } = useContext(AuthContext)
   const [isLoading, setIsLoading] = useState(false);
-const navigate=useNavigate()
-  const handleSubmit = async(e) => {
+  const navigate = useNavigate()
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
-    try{
-        const responce=await axios.post('http://localhost:5000/api/login', {email,password})
-        console.log(responce.data)
+    try {
+      const responce = await axios.post('http://localhost:5000/api/login', { email, password })
+      console.log(responce.data)
+       
 
-        if (responce.data.status){
-          console.log(responce)
-          navigate('/admin')
-        }else{
-                    navigate('/login')
 
-        }
- 
-    }catch(err){
+      if (responce.data.user) {
+        console.log('hi')
+        setUser(responce.data.user)
+        setAccessToken(responce.data.accessToken)
+        
+
+        navigate('/admin')
+      } else {
+        navigate('/login')
+      }
+
+    } catch (err) {
       console.error(err)
     }
     console.log({ email, password, company, rememberMe });
-    
+
     setTimeout(() => setIsLoading(false), 1500);
   };
 

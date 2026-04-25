@@ -1,14 +1,14 @@
 const express =require('express');
-const adminControllers = require('../controllers/adminControllers');
-const authMiddleware = require('../middleware/authMiddleware');
-const authorizeRoles = require('../middleware/authoriseRoles');
+const { verifyToken, authorizeRoles } = require('../middleware/authMiddleware');
+
 const router = express.Router();
 
-router.post('/create-company',authMiddleware,authorizeRoles("admin"),(req,res)=>{
-    console.log(req.body)
-    adminControllers.CreateCompany(req.body).then((data)=>{
-        res.json({status: true})
-    })
-    
-})
+router.post('/create-company', verifyToken, authorizeRoles("admin"), async (req, res) => {
+  try {
+    await adminControllers.CreateCompany(req.body);
+    res.json({ status: true });
+  } catch (error) {
+    res.status(500).json({ status: false, error: error.message });
+  }
+});
 module.exports=router

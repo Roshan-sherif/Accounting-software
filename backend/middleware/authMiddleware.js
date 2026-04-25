@@ -1,20 +1,20 @@
-const jwt=require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
 
-const authMiddleware =(req,res,next)=>{
-const token = req.cookies
-if(!token){
-    return res.status(401).json({error:'Authentication token missing'});
+exports.verifyToken = (req, res, next) => {
+  const authHeader = req.headers['authorization'];
+  const token = authHeader?.split(' ')[1];
+  if (!token) return res.sendStatus(401);
 
-}
-    try {
-        const decode=jwt.verify(token,process.env.JWT_TOKEN)
-        req.user=decode
-        next()
+  jwt.verify(token, process.env.ACCESS_SECRET, (err, user) => {
+    if (err) return res.sendStatus(403);
+    req.user = user; 
+    next();
+  });
+};
 
-    } catch (error) {
-        return res.status(403).json({error:'Invalide or expired or toke'})
-        
-    }
-
-}
-module.exports=authMiddleware
+exports.authorizeRoles = (...allowedRoles) => {
+  return (req, res, next) => {
+    if (!allowedRoles.includes(req.user.role)) return res.sendStatus(403);
+    next();
+  };
+};

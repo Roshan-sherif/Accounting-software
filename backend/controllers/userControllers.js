@@ -20,7 +20,7 @@ module.exports={
                 }
                 if(user){
                 const isMatch=await  bcrypt.compare(password,user.password)
-                                if(!isMatch){
+                    if(!isMatch){
                     reject()
                 }
 

@@ -4,9 +4,12 @@ import StatsCard from '../../../components/Dashboard/Statecard';
 import RecentActivity from '../../../components/Dashboard/RecentActivities';
 import QuickActions from '../../../components/Dashboard/QuickAction';
 import './Dashboard.css';
+import { useAuth } from '../../../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
+
 
 const Dashboard = () => {
-  const stats = [
+ const stats = [
     { 
       title: "Total Revenue", 
       value: "$48,526", 

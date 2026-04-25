@@ -1,7 +1,8 @@
 const express = require('express');
 const { CheckUser } = require('../controllers/userControllers');
 const router = express.Router();
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+const authMiddleware = require('../middleware/authMiddleware');
 
 router.post('/', (req, res) => {
     console.log(req.body)
@@ -12,28 +13,31 @@ router.post('/', (req, res) => {
                 email: user.email,
                 role: user.role
             };
-
-            const token = jwt.sign(
+            const accessToken = jwt.sign(
                 { id: user.id, name: user.name, role: user.role },
-                process.env.JWT_TOKEN,
+                process.env.ACCESS_TOKEN_SECRET,
+                { expiresIn: "15m" }
+            );
+
+
+            const refreshToken = jwt.sign(
+                { id: user.id, name: user.name, role: user.role },
+                process.env.REFRESH_TOKEN_SECRET,
                 { expiresIn: "7d" }
             );
-            console.log(token)
 
-            res.cookie("token", token, {
+            res.cookie("token", refreshToken, {
                 httpOnly: true,
-                secure: false,
-                sameSite: "strict",
-                maxAge: 7 * 24 * 60 * 60 * 1000
+                secure: process.env.NODE_ENV === 'production' ? true : false, 
+                sameSite: 'lax',
+                maxAge: 7 * 24 * 60 * 60 * 1000,
             });
-            const decode= jwt.verify(token, process.env.JWT_TOKEN)
-                console.log(decode)
-
-            res.json({ status: true, user: result });
+            console.log(accessToken)
+            res.status(200).json({ status: true, user: result, accessToken });
         })
         .catch((err) => {
             console.error(err);
-            res.json({ status: false, error: err });
+            res.status(401).json({ status: false, error: err });
         });
 })
 module.exports = router

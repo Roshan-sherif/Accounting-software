@@ -70,8 +70,6 @@ function AdminRoutes() {
         <Route path='/master/voucher-type/add' element={<VoucherTypeForm />} />
         <Route path='/master/currency/add' element={<VoucherTypeForm />} />
         <Route path='/master/currency' element={<CurrencyListPage />} />
-
-
         <Route path='/products/categories' element={<CategoryListPage />} />
         <Route path='/product-services/categories/create' element={<CategoryForm />} />
         <Route path='/products/creation' element={<ProductListPage />} />
@@ -86,7 +84,7 @@ function AdminRoutes() {
         <Route path='products/units/add' element={<UnitForm />} />
         <Route path='/products/Purchase-Price-List' element={<PriceListPage />} />
         <Route path='/products/Purchase-Price-List/create' element={<PriceListForm />} />
-
+ 
         <Route path='/purchases/quotation' element={<PurchaseQuotationList />} />
         <Route path='/purchases/quotation/create' element={<CreatePurchaseQuotation />} />
         <Route path='/purchases/orders' element={<PurchaseOrderList />} />
@@ -113,20 +111,6 @@ function AdminRoutes() {
         <Route path='/financial/balance-sheet' element={<BalanceSheet />} />
         <Route path='financial/profit-loss' element={<ProfitAndLoss />} />
         <Route path='/financial/chart-of-accounts' element={<ChartOfAccounts />} />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       </Routes>
     </ComapnyLayout>
